@@ -1,5 +1,6 @@
-import org.junit.Test
+
 import org.junit.Assert.*
+import org.junit.Test
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
@@ -7,8 +8,45 @@ class WallServiceTest {
 
     @Test
     fun testAdd() {
-        val post1 = Post(1, 2, 3, emptyArray(), null, "text1", true, 10, 5, "Simple", true, true, true, false, false, 1)
-        val post2 = Post(2, 3, 4, emptyArray(), null, "text2", true, 20, 10, "Simple", true, true, true, false, false, 2)
+        val post1 = Post(
+            1,
+            2,
+            3,
+            emptyArray(),
+            true,
+            "text1",
+            true,
+            10,
+            5,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            1,
+            emptyArray(),
+
+            )
+        val post2 = Post(
+            2,
+            3,
+            4,
+            emptyArray(),
+            true,
+            "text2",
+            true,
+            20,
+            10,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            2,
+emptyArray()
+        )
 
         WallService.add(post1)
         WallService.add(post2)
@@ -19,8 +57,44 @@ class WallServiceTest {
 
     @Test
     fun testUpdate() {
-        val post1 = Post(1, 2, 3, emptyArray(), null, "text1", true, 10, 5, "Simple", true, true, true, false, false, 1)
-        val post2 = Post(2, 3, 4, emptyArray(), null, "text2", true, 20, 10, "Simple", true, true, true, false, false, 2)
+        val post1 = Post(
+            1,
+            2,
+            3,
+            emptyArray(),
+            true,
+            "text1",
+            true,
+            10,
+            5,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            1,
+            emptyArray()
+        )
+        val post2 = Post(
+            2,
+            3,
+            4,
+            emptyArray(),
+            true,
+            "text2",
+            true,
+            20,
+            10,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            2,
+            emptyArray()
+        )
 
         WallService.add(post1)
         WallService.add(post2)
@@ -34,8 +108,44 @@ class WallServiceTest {
 
     @Test
     fun testPrintAll() {
-        val post1 = Post(1, 2, 3, emptyArray(), null, "text1", true, 10, 5, "Simple", true, true, true, false, false, 1)
-        val post2 = Post(2, 3, 4, emptyArray(), null, "text2", true, 20, 10, "Simple", true, true, true, false, false, 2)
+        val post1 = Post(
+            1,
+            2,
+            3,
+            emptyArray(),
+            true,
+            "text1",
+            true,
+            10,
+            5,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            1,
+            emptyArray()
+        )
+        val post2 = Post(
+            2,
+            3,
+            4,
+            emptyArray(),
+            true,
+            "text2",
+            true,
+            20,
+            10,
+            "Simple",
+            true,
+            true,
+            true,
+            false,
+            false,
+            2,
+            emptyArray()
+        )
 
         WallService.add(post1)
         WallService.add(post2)

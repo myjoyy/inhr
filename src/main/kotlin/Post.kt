@@ -1,21 +1,23 @@
 data class Post(
-    val ownerId: Long,
-    val fromId: Long,
-    val createdBy: Long,
-    val attachments: Array<Attachment> = emptyArray(),
-    val original: Post? = null,
-    val text: String = "",
-    val friendsOnly: Boolean = false,
-    val likes: Int = 0,
-    val reposts: Int = 0,
-    val postType: String = "Simple",
-    val canPin: Boolean = true,
-    val canDelete: Boolean = true,
-    val canEdit: Boolean = true,
-    val isPinned: Boolean = false,
-    val isFavorite: Boolean = false,
-    val id: Int = 0
+        val ownerId: Long,
+        val fromId: Long,
+        val createdBy: Long,
+        val attachments: Array<Attachment>,
+        val original: Boolean,
+        val text: String,
+        val friendsOnly: Boolean,
+        val likes: Int,
+        val reposts: Int,
+        val postType: String,
+        val canPin: Boolean,
+        val canDelete: Boolean,
+        val canEdit: Boolean,
+        val isPinned: Boolean,
+        val isFavorite: Boolean,
+        val id: Int,
+        var comments: Array<Any>
 ) {
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
@@ -39,4 +41,7 @@ data class Post(
         if (isFavorite != other.isFavorite) return false
         if (id != other.id) return false
         return true
-    }}
+    }
+}
+
+

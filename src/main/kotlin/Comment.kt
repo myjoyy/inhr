@@ -7,6 +7,8 @@ data class Comment(
         val replyToUser: Int?,
         val replyToComment: Int?,
         val attachments: Any?,
-        val parentsStack: Array<Any>?,
-        val thread: Any?
-)
+        val parentsStack: Int,
+        val thread: Any?,
+        val postId: Int,
+        val likes: Int
+                  )

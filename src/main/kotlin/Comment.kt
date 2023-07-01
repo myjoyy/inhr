@@ -1,8 +1,8 @@
 data class Comment(
         val id: Int,
-        val fromId: Int,
+        var fromId: Int,
         val date: Int,
-        val text: String,
+        var text: String,
         val donut: Any?,
         val replyToUser: Int?,
         val replyToComment: Int?,

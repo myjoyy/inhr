@@ -15,3 +15,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
 }
 
+test {
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
